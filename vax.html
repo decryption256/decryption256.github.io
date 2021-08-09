@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<style>
@@ -48,7 +48,6 @@
 
 		.emailform {
   			display: flex;
-  			flex-flow: row wrap;
   			align-items: center;
   			padding-bottom: 30px;
   			flex-direction: column;
@@ -100,11 +99,12 @@
 
 	<p>Enter your email & upload a screenshot of your <a href="https://www.servicesaustralia.gov.au/individuals/news/add-proof-your-covid-19-vaccinations-your-apple-wallet-or-google-pay">COVID-19 digital certificate</a> to get a free 3 month subscription to The Sizzle as a small token of my apprecition for getting vaccinated. Feel free to censor the document number, healthcare identifier and date of birth.</p>
 
-	<form id="siztrial" class="emailform">
+	<form id="siztrial" class="emailform" action="https://formspree.io/f/mgernjny" method="POST" enctype="multipart/form-data">
       	<input type="email" name="email-address" placeholder="you@arecool.com" maxlength=100 required />
-      	<input type="file" name="my_file_input" required />
+      	<input type="file" name="upload" required />
       	<button type="submit">Get Your Free 3 Month Subcription</button>
-    </form>
+    </form>   
+  
 
     <h2>Hello, my name is Anthony and I write The Sizzle</h2>
 
@@ -127,10 +127,10 @@
 	Email me, <em><a href="mailto:anthony@thesizzle.com.au">anthony@thesizzle.com.au</a></em> and I'll usually reply in 24-48 hours. If you prefer to chat, add me on Telegram where I am <em>@decryption</em></p>
 
 	<p><strong>Is there an archive of old issues of The Sizzle I can check out?</strong><br>
-	Yes! Visit <em><a href="https://archive.thesizzle.com.au">https://archive.thesizzle.com.au</a></em> for previous issues of The Sizzle. I usually update it once a month.</p>
+	Yes! Visit <em><a href="https://archive.thesizzle.com.au">https://archive.thesizzle.com.au</a></em> for previous issues of The Sizzle. It hasn't been updated in a while.</p>
 
 	<p><strong>How do I cancel my subscription?</strong><br>
-	Visit the <a href="javascript:void(0)" data-cb-type="portal" >customer portal</a> to stop the payments and stop receiving The Sizzle.</p>
+	Paying subscribers can visit the <a href="javascript:void(0)" data-cb-type="portal" >customer portal</a> to stop the payments and stop receiving The Sizzle. If you haven't paid, just click the unsubscribe link at the bottom of any issue of The Sizzle.</p>
 
 	<p><strong>How do I update my email or payment details?</strong><br>
 	The almighty <a href="javascript:void(0)" data-cb-type="portal" >customer portal</a> is where this operation can be conducted. Changing emails is manual at the moment while I figure out how to automate it - so for now <a href="mailto:anthony@thesizzle.com.au">please email me</a> if you'd like to change the address where your daily Sizzle is sent.
@@ -145,26 +145,7 @@
 	I spend half of my weekdays occupied with Sizzle related stuff and the other half as a freelance tech writer, mostly advertorial/sponsored content for various outlets but sometimes product reviews. If you need someone to write tech related words, <a href="mailto:anthony@thesizzle.com.au">please get in touch!</a></p>
 
 	<p><strong>Which platform does The Sizzle operate on?</strong><br>
-	<a href="https://tillypay.com/">Chargebee</a> for billing, <a href="https://www.activecampaign.com/au/">ActiveCampaign</a> for sending emails, <a href="https://zapier.com/">Zapier</a> to tie the two together and <a href="https://pages.github.com/">GitHub Pages</a> to host this site on.</p>
+	<a href="https://tillypay.com/">Chargebee</a> for billing, <a href="https://www.activecampaign.com/au/">ActiveCampaign</a> for sending emails, <a href="https://zapier.com/">Zapier</a> to tie the two together and <a href="https://pages.github.com/">GitHub Pages</a> to host this site on. The vaccination screenshots are uploaded to Amazon S3.</p>
 
-	<script src="jquery-3.6.0.min.js">
-		// here so the Zapier code can work
-	</script>
-
-	<script>
-		// POST form data to zapier on submit
-		$("#siztrial").submit(function(e) {
-  			e.preventDefault();
-  			$.ajax({
-    			url: "https://hooks.zapier.com/hooks/catch/754740/ogepu83",
-    			type: "post",
-    			data: $("#siztrial").serialize(),
-    			success: function() {
-      				// Redirect to another success page
-      				window.location = "https://thesizzle.com.au/freetrial_wait.html";
-    			}
-  			});
-		});
-	</script>
 </body>
 </html>
