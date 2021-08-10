@@ -37,6 +37,13 @@
   			width: 75%;
 		}
 
+		img.cert {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 75%;
+		}
+
 		li:not(:last-child) {
     		margin-bottom: 5px;
 		}
@@ -90,22 +97,29 @@
 		<li>A brief email newsletter sent every weekday.</li>
 		<li>Three no bullshit summaries of the last 24 hours in tech news.</li>
 		<li>The freshest Australian computer & electronics bargains.</li>
-		<li><strike>$5 a month or $50 a year</strike></li>
-		<li>Free for vaccinated new subscribers! No ads, no tracking, some affiliate links.</li>
+		<li><strike>$5 a month or $50 a year.</strike></li>
+		<li>Free for COVID-19 vaccinated new subscribers! No ads, no tracking.</li>
 		<li>Over 1350 issues since October 2015, sent to over 770 paid subscribers.</li>
 	</ul>
 
 	<h2>Your ideas are intriguing to me and I wish to subscribe to your newsletter...</h2>
 
-	<p>Enter your email & upload a screenshot of your <a href="https://www.servicesaustralia.gov.au/individuals/news/add-proof-your-covid-19-vaccinations-your-apple-wallet-or-google-pay">COVID-19 digital certificate</a> to get a free 3 month subscription to The Sizzle as a small token of my apprecition for getting vaccinated. Feel free to censor the document number, healthcare identifier and date of birth.</p>
+	<p>Enter your email & upload a screenshot of your <a href="https://www.servicesaustralia.gov.au/individuals/news/add-proof-your-covid-19-vaccinations-your-apple-wallet-or-google-pay">COVID-19 digital certificate</a> to get a free 3 month subscription to The Sizzle as a small token of my apprecition for getting vaccinated.</p>
+
+
+	<figure>
+		<img class="cert" src="aavaxcert.jpg">
+		<figcaption>Feel free to censor the document number, healthcare identifier and date of birth.</figcaption>
+	</figure>
+
 
 	<form id="siztrial" class="emailform" action="https://formspree.io/f/mgernjny" method="POST" enctype="multipart/form-data">
       	<input type="email" name="email-address" placeholder="you@arecool.com" maxlength=100 required />
-      	<input type="file" name="upload" required />
+      	<input type="file" name="upload" accept="image/png, image/jpeg" required />
       	<button type="submit">Get Your Free 3 Month Subcription</button>
     </form>   
   
-
+  	
     <h2>Hello, my name is Anthony and I write The Sizzle</h2>
 
 	<figure>
