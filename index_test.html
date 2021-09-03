@@ -99,15 +99,17 @@
 
 	<p>Enter your email below to get started with a 2-week free trial of The Sizzle. No payment details are required to get started, so you <strong><em>will not</em></strong> be automatically billed after the trial.</p>
 
-	<form class="emailform" action="https://api.web3forms.com/submit" method="POST">
+	<form class="emailform" action="https://formsubmit.co/anthony@thesizz.e.com.au" method="POST">
       	
-      	<input type="hidden" name="apikey" value="bee2a056-c193-4bd5-9dc0-b05d4981ea97">
-      	
-      	<input type="hidden" name="webhook" value="https://hook.integromat.com/bav6ljj73nii8qy2ltyntwvtgdisyupa">
+      	<input type="hidden" name="_webhook" value="https://hook.integromat.com/bav6ljj73nii8qy2ltyntwvtgdisyupa">
 
       	<input type="email" name="email-address" placeholder="you@arecool.com" maxlength=100 required />
       	
-      	<input type="hidden" name="redirect" value="https://thesizzle.com.au/freetrial_wait">
+      	<input type="hidden" name="_next" value="https://thesizzle.com.au/freetrial_wait">
+
+      	<input type="text" name="_honey" style="display:none">
+
+      	<input type="hidden" name="_captcha" value="false">
       	
       	<button type="submit">Start Trial</button>
     </form>
