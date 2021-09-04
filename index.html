@@ -76,9 +76,8 @@
 		@media (max-width: 3000px) {.emailform input {margin: 10px 0;}}
 
 	</style>
-	<script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="sizzle" ></script>
 	
-	<script async src='https://dash.sparkloop.app/widget/MF6a24719f98/embed.js' data-sparkloop></script>
+	<script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="sizzle" ></script>
 	
 	<title>The Sizzle - Australia's favourite daily tech newsletter</title>
 </head>
@@ -93,17 +92,22 @@
 		<li>Three no bullshit summaries of the last 24 hours in tech news.</li>
 		<li>The freshest Australian computer & electronics bargains.</li>
 		<li>$5 a month or $50 a year. No ads, no tracking, some affiliate links.</li>
-		<li>Over 1350 issues since October 2015, sent to over 770 paid subscribers.</li>
+		<li>Over 1400 issues since October 2015, sent to over 750 paid subscribers.</li>
 	</ul>
 
 	<h2>Your ideas are intriguing to me and I wish to subscribe to your newsletter</h2>
 
 	<p>Enter your email below to get started with a 2-week free trial of The Sizzle. No payment details are required to get started, so you <strong><em>will not</em></strong> be automatically billed after the trial.</p>
 
-	<form id="siztrial" class="emailform">
+	<form class="emailform" action="https://hook.integromat.com/1mg14l39y57u6nuyk7pl7uqxotdcryns" method="POST">
+
       	<input type="email" name="email-address" placeholder="you@arecool.com" maxlength=100 required />
+      	
+      	<input type="hidden" name="redirect" value="https://thesizzle.com.au/freetrial_wait">
+
       	<button type="submit">Start Trial</button>
     </form>
+
 
     <h2>Hello, my name is Anthony and I write The Sizzle</h2>
 
@@ -135,32 +139,13 @@
 	Yep, you guessed it - <a href="javascript:void(0)" data-cb-type="portal" >customer portal</a>!
 
 	<p><strong>How many people subscribe to The Sizzle?</strong><br>
-	As of mid-March 2021, 758 people pay to read The Sizzle. I love them all!</p>
+	As of September 2021, 759 people pay to read The Sizzle. I love them all!</p>
 
 	<p><strong>Is The Sizzle your full-time job?</strong><br>
 	I spend half of my weekdays occupied with Sizzle related stuff and the other half as a freelance tech writer, mostly advertorial/sponsored content for various outlets but sometimes product reviews. If you need someone to write tech related words, <a href="mailto:anthony@thesizzle.com.au">please get in touch!</a></p>
 
 	<p><strong>Which platform does The Sizzle operate on?</strong><br>
-	<a href="https://tillypay.com/">Chargebee</a> for billing, <a href="https://www.activecampaign.com/au/">ActiveCampaign</a> for sending emails, <a href="https://zapier.com/">Zapier</a> to tie the two together and <a href="https://pages.github.com/">GitHub Pages</a> to host this site on.</p>
+	<a href="https://tillypay.com/">Chargebee</a> for billing, <a href="https://www.activecampaign.com/au/">ActiveCampaign</a> for sending emails, <a href="https://www.integromat.com/?pc=thesizzle">Integromat</a> to tie the two together and <a href="https://pages.github.com/">GitHub Pages</a> to host this site.</p>
 
-	<script src="jquery-3.6.0.min.js">
-		// here so the Zapier code can work
-	</script>
-
-	<script>
-		// POST form data to zapier on submit
-		$("#siztrial").submit(function(e) {
-  			e.preventDefault();
-  			$.ajax({
-    			url: "https://hooks.zapier.com/hooks/catch/754740/ogepu83",
-    			type: "post",
-    			data: $("#siztrial").serialize(),
-    			success: function() {
-      				// Redirect to another success page
-      				window.location = "https://thesizzle.com.au/freetrial_wait.html";
-    			}
-  			});
-		});
-	</script>
 </body>
 </html>
