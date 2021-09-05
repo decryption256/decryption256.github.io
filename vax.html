@@ -78,7 +78,13 @@
   			color: white;
   			font-size: 100%;
 		}
-		
+
+		.emailform button:active {
+			background-color: #3e8e41;
+  			box-shadow: 0 5px #666;
+  			transform: translateY(4px);
+		}
+
 		@media (max-width: 3000px) {.emailform input {margin: 10px 0;}}
 
 	</style>
@@ -130,7 +136,7 @@
       	<input type="hidden" name="webhook" value="https://hook.integromat.com/vyra9gibvo619cpbgujgxssxh63315iw" />
       	<input type="hidden" name="redirect" value="https://thesizzle.com.au/thanks_vax">
       	
-      	<button type="submit">Get Your Free 3 Month Subcription</button>
+      	<button type="submit" class="button">Get Your Free 3 Month Subcription</button>
     </form>   
   	
   		
