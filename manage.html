@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<style>
@@ -41,6 +41,17 @@
   			width: 75%;
 		}
 
+		img.cert {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 75%;
+		}
+
+		li:not(:last-child) {
+    		margin-bottom: 5px;
+		}
+
 		figcaption {
   			font-style: italic;
   			font-size: 80%;
@@ -64,6 +75,32 @@
   			font-weight: bold;
 		}
 
+		.emailform {
+  			display: flex;
+  			align-items: center;
+  			padding-bottom: 30px;
+  			flex-direction: column;
+    			align-items: stretch;
+    			margin-left: auto;
+  			margin-right: auto;
+  			width: 75%;
+		}
+
+		.emailform input {
+  			margin: 5px 10px 5px 0;
+  			padding: 10px;
+  			border: 1px solid #ddd;
+  			font-size: 100%;
+		}
+
+		.emailform button {
+  			padding: 10px 20px;
+  			background-color: #ea2461;
+  			border: 1px solid #ddd;
+  			color: white;
+  			font-size: 100%;
+		}
+
 		hr {
 			line-height: 1.3em;
 			color: #ea2461;
@@ -76,12 +113,14 @@
 		.butt {
 			text-decoration: none;
 		}
+		
+		@media (max-width: 3000px) {.emailform input {margin: 10px 0;}}
 
-</style>
-
-<head>
-	<title>The Sizzle - Australia's favourite daily tech newsletter</title>
+	</style>
+	
 	<script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="sizzle" ></script>
+
+	<title>The Sizzle - Update Details</title>
 </head>
 
 <body>
@@ -91,7 +130,19 @@
 
 	<a href="javascript:void(0)" data-cb-type="portal" class="butt"><button>Enter The Sizzle Subscriber Portal</button></a>
 
+	<hr>
+
+	<center><h3>Want to change an email address for anything Sizzle related (forum, billing, newsletter)? Use the form below:</h3></center>
 	
+	<form id="siztrial" class="emailform" action="https://api.web3forms.com/submit" method="POST" />
+		<input type="hidden" name="apikey" value="bee2a056-c193-4bd5-9dc0-b05d4981ea97" />
+		<input type="hidden" name="webhook" value="https://hook.integromat.com/eleggh9x9ek073r4oy3umcq2m4btyupc" />
+
+      	<input type="email" name="old-email-address" placeholder="old email" maxlength=100 required />
+      	<input type="email" name="new-email-address" placeholder="new email" maxlength=100 required />
+      	<input type="hidden" name="redirect" value="https://thesizzle.com.au/change-verify">
+      	<button type="submit">Submit Address Change</button>
+    </form>   
 </body>
 
 </html>
