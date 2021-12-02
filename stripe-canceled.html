@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		html {
+			padding-top:1em;
+			padding-bottom:4em;
+		}
+
+		body {
+			font-family: sans-serif;
+			line-height: 1.5em;
+			max-width: 40em;
+			padding: 0 2%;
+			margin: auto;
+			color: #262626;
+		}
+
+		h2 {
+			line-height: 1.3em;
+			color: #ea2461;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		img.logo {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 75%;
+		}
+
+		li:not(:last-child) {
+    		margin-bottom: 5px;
+		}
+
+		figcaption {
+  			font-style: italic;
+  			font-size: 80%;
+		}
+	</style>
+
+<head>		
+	<title>The Sizzle - Australia's favourite daily tech newsletter</title>
+</head>
+
+<body>
+	<img class="logo" src="images/Logo-TheSizzle_long.svg">
+
+	<h2>You bloody ripper!</h2>
+
+	<p>Thank you so much for subscribing to my little newsletter. I hope you get years of value out of it. Your first paid issue of The Sizzle will arrive this afternoon if it's not a weekend or Victorian public holiday.</p>
+
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  id="checkout-button-price_1JpAJEDLEDdWdQxeJ605DQDq"
+  role="link"
+  type="button"
+>
+  Checkout
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_3yVAxkyaQnl5pbUKw8Tzw0xt');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1JpAJEDLEDdWdQxeJ605DQDq');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1JpAJEDLEDdWdQxeJ605DQDq', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'http://thesizzle.com.au/success',
+      cancelUrl: 'http://thesizzle.com.au/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+	<p>As always, feel free to get in touch about anything, any time: <a href="mailto:anthony@thesizzle.com.au">anthony@thesizzle.com.au</a>
+	<br>	--Anthony</p>
+
+</body>
+
+</html>
