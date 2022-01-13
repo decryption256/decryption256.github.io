@@ -114,14 +114,13 @@
 
 	<p>Enter your email below to get started with a 1-month free trial of The Sizzle. No payment details are required to get started, so you <strong><em>will not</em></strong> be automatically billed after the trial.</p>
 
-	<form id="siztrial" class="emailform" action="https://api.web3forms.com/submit" data-botpoison-public-key="pk_5f3b2a93-5198-4229-9762-2a02aec22f67" method="POST" >
-		<input type="hidden" name="apikey" value="bee2a056-c193-4bd5-9dc0-b05d4981ea97">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
+	<form id="siztrial" class="emailform" action="https://smartforms.dev/submit/613451027a195017922d7ab3" method="POST" >
 		<input type="email" name="email-address" placeholder="you@arecool.com" maxlength=100 required />
-		<input type="email" name="email" class="hidden" style="display: none;">
-		<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-      		<input type="hidden" name="webhook" value="https://hook.integromat.com/k3zs3x7oibrnpdgymo6tuqpjoh2fwenh" />
-      		<input type="hidden" name="redirect" value="https://thesizzle.com.au/freetrial_wait">
-      		<button type="submit">Start Trial</button>
+		<div class="g-recaptcha" data-sitekey="6Ldj1wweAAAAAEkL6HQxr-oaysYW7NJtj-8PM36_"></div>
+   		<input type="hidden" name="webhook" value="https://hook.integromat.com/k3zs3x7oibrnpdgymo6tuqpjoh2fwenh" />
+   		<button type="submit">Start Trial</button>
     </form>
 
     <h2>Hello, my name is Anthony and I write The Sizzle</h2>
