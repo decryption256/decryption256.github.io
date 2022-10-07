@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<style>
@@ -25,10 +26,6 @@
 			color: #ea2461;
 		}
 
-		h3 {
-			font-weight: 400;
-		}
-
 		img {
 			width: 100%;
 			height: auto;
@@ -41,14 +38,24 @@
   			width: 75%;
 		}
 
+		img.cert {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 75%;
+		}
+
+		li:not(:last-child) {
+    		margin-bottom: 5px;
+		}
+
 		figcaption {
   			font-style: italic;
   			font-size: 80%;
 		}
 
-		button {
-			display: flex;
-  			flex-flow: row wrap;
+		.emailform {
+  			display: flex;
   			align-items: center;
   			padding-bottom: 30px;
   			flex-direction: column;
@@ -56,32 +63,35 @@
     		margin-left: auto;
   			margin-right: auto;
   			width: 75%;
+		}
+
+		.emailform input {
+  			margin: 5px 10px 5px 0;
+  			padding: 10px;
+  			border: 1px solid #ddd;
+  			font-size: 100%;
+		}
+
+		.emailform button {
   			padding: 10px 20px;
   			background-color: #ea2461;
   			border: 1px solid #ddd;
   			color: white;
   			font-size: 100%;
-  			font-weight: bold;
 		}
 
-		hr {
-			line-height: 1.3em;
-			color: #ea2461;
-			margin-top: 30px;
-			border-bottom: 5px solid;
-      		border-image-source: linear-gradient(90deg, #ea2461 30%, #d286e0 50%, #82c8ec);
-      		border-image-slice: 0 0 1 0;
+		.emailform button:active {
+			background-color: #3e8e41;
+  			box-shadow: 0 5px #666;
+  			transform: translateY(4px);
 		}
 
-		.butt {
-			text-decoration: none;
-		}
+		@media (max-width: 3000px) {.emailform input {margin: 10px 0;}}
 
-</style>
+	</style>
 
 <head>		
 	<title>The Sizzle - Australia's favourite daily tech newsletter</title>
-	<script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="sizzle" ></script>
 </head>
 
 <body>
