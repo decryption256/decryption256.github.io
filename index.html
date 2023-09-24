@@ -97,24 +97,10 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="Get an Australian take on the day's tech news with The Sizzle!" />
 	<meta property="og:locale" content="en_AU" />
-	
-	<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdwN08oAAAAAC1o7NU658kG3MFtsPp1UcfxDDSL"></script>
 </head>
 
 <body>
-	<script>
-function onClick(e) {
-  e.preventDefault();
-  grecaptcha.enterprise.ready(async () => {
-    const token = await grecaptcha.enterprise.execute('6LdwN08oAAAAAC1o7NU658kG3MFtsPp1UcfxDDSL', {action: 'LOGIN'});
-    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
-    // reCAPTCHA Enterprise to the end user's browser.
-    // This token must be validated by creating an assessment.
-    // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-  });
-}
-</script>
-	
+
 	<img class="logo" src="images/Logo-TheSizzle_long.svg">
 
 	<h2>The Sizzle? What the hell is The Sizzle?!</h2>
@@ -135,7 +121,7 @@ function onClick(e) {
 
 	<p>Enter your email below to get started with a 30-day free trial of The Sizzle. No payment details are required to get started, so you <strong><em>will not</em></strong> be automatically billed after the trial.</p>
 	
-	
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<form id="siztrial" class="emailform" action="https://smartforms.dev/submit/6347bb937a195017922fd3d2" method="POST" >
 		<input type="email" name="email-address" placeholder="you@arecool.com" autocomplete="email" maxlength=100 required />
 		<input type="hidden" name="trial_length" value="30">
