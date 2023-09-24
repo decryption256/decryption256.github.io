@@ -98,10 +98,22 @@
 	<meta property="og:description" content="Get an Australian take on the day's tech news with The Sizzle!" />
 	<meta property="og:locale" content="en_AU" />
 	
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdwN08oAAAAAC1o7NU658kG3MFtsPp1UcfxDDSL"></script>
 </head>
 
 <body>
+	<script>
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6LdwN08oAAAAAC1o7NU658kG3MFtsPp1UcfxDDSL', {action: 'LOGIN'});
+    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+    // reCAPTCHA Enterprise to the end user's browser.
+    // This token must be validated by creating an assessment.
+    // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+  });
+}
+</script>
 	
 	<img class="logo" src="images/Logo-TheSizzle_long.svg">
 
@@ -128,7 +140,7 @@
 		<input type="email" name="email-address" placeholder="you@arecool.com" autocomplete="email" maxlength=100 required />
 		<input type="hidden" name="trial_length" value="30">
 		<input type="hidden" name="trial_source" value="sizhome">
-		<div class="cf-turnstile" data-sitekey="0x4AAAAAAAAwfTzix4S-qIrS"></div>
+		<div class="g-recaptcha" data-sitekey="6LdwN08oAAAAAHQGJZrnoFmkMQDDAqVS3oOacoC9"></div>
 		<button type="submit">Start Trial</button>
     	</form>
 	
@@ -166,7 +178,7 @@
 		<input type="email" name="email-address" placeholder="you@arecool.com" autocomplete="email" maxlength=100 required />
 		<input type="hidden" name="trial_length" value="30">
 		<input type="hidden" name="trial_source" value="sizhome">
-		<div class="cf-turnstile" data-sitekey="0x4AAAAAAAAwfTzix4S-qIrS"></div>
+		<div class="g-recaptcha" data-sitekey="6LdwN08oAAAAAHQGJZrnoFmkMQDDAqVS3oOacoC9"></div>
 		<button type="submit">Start Trial</button>
     	</form>	
 
@@ -193,7 +205,7 @@
 	Gift subscriptions are a thing! Visit <a href="https://thesizzle.com.au/gift">https://thesizzle.com.au/gift</a> to purchase as many gift subscriptions as you like.</p>
 
 	<p><strong>How many people subscribe to The Sizzle?</strong><br>
-	As of March 2023, 1281 people pay to read The Sizzle. I love them all!</p>
+	As of September 2023, 1309 people pay to read The Sizzle. I love them all!</p>
 
 	<p><strong>Is The Sizzle your full-time job?</strong><br>
 	I spend half of my weekdays occupied with Sizzle related stuff and the other half as a freelance tech writer, mostly advertorial/sponsored content for various outlets but sometimes product reviews. If you need someone to write tech related words, <a href="mailto:anthony@thesizzle.com.au">please get in touch!</a></p>
